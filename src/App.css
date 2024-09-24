@@ -12,15 +12,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  
- 
+
   
 }
 
 .container form{
   padding: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  border-radius: 12px;
+  border-radius: var(--border-radius-default);
+  min-height: 390.38px;
+  min-width: 610px;
 }
 
 .container form .name-form-container{
@@ -33,4 +34,45 @@
 .container form Button{
   width: 91%;
   margin-top: 4; /*Variavel do chakra-UI*/
+  background: linear-gradient(113deg, rgba(2,0,36,1) 0%, rgba(10,194,231,0.3225665266106442) 100%, rgba(225,225,240,0.87718837535014) 100%);
+}
+
+.container form Button:hover{
+  background-color: rgba(73, 63, 179, 0.379);
+  
+  
+}
+
+
+.container .product-details{
+  padding: 24px;
+  background: rgb(2,0,36);
+  background: linear-gradient(337deg, rgba(2, 0, 36, 0.689) 0%, rgba(8,173,207,0.0760679271708683) 100%, rgba(225,225,240,0.87718837535014) 100%);
+  min-height: 390.38px;
+  min-width: 610px;
+  max-width: 610px;
+  border-radius: var(--border-radius-default);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+.container .product-details p{
+  color: #616161;
+  text-align: start;
+}
+
+.container .product-details h2{
+  text-align: start;
+  font-size: 32px;
+  color: #242424;
+  font-weight: 600;
+  width: 100%;
+}
+
+.container .product-details span{
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: start;
+  width: 100%;
+  padding-left: 15px;
 }

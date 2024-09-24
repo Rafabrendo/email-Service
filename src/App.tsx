@@ -50,12 +50,17 @@ function App() {
         placeholder='Digite seu email'
       />
       <Spacer height="4" />
-      <Button colorScheme='green'>Enviar</Button>
+      <Button >Enviar</Button>
 
       </form>
-
+      <Spacer width="4" maxWidth="4"/>
       <div className="product-details">
-        
+        <h2>Assinatura Mensal</h2>
+        <Spacer height="4"/>
+        <p>Você irá pagar</p>
+        <span>R$ 250</span>
+        <Spacer height="4"/>
+        <p>Regras: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel praesentium expedita earum, distinctio reprehenderit accusantium a rem nobis vero alias beatae! Est sint et itaque eius quam eveniet expedita quidem!</p>
       </div>
     </div>
   );
