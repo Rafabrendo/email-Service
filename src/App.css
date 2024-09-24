@@ -11,5 +11,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  
+ 
+  
+}
+
+.container form{
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  border-radius: 12px;
+}
+
+.container form .name-form-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.container form Button{
+  width: 91%;
+  margin-top: 4; /*Variavel do chakra-UI*/
 }
