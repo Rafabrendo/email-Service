@@ -2,13 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import { PrimaryInput} from './components/Input/PrimaryInputs';
 import { Button, Spacer } from '@chakra-ui/react';
+import { useIdentityMutation } from './hooks/useIdentityMutation';
 
 
 function App() {
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
-    secondName: ''
+    lastName: ''
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,6 +19,18 @@ function App() {
       [name]: value,
     });
   };
+
+  const {mutate} = useIdentityMutation()
+  
+  const submit = () => {
+    const { email, firstName, lastName } = formData;
+    mutate({
+      email,
+      firstName,
+      lastName,
+    });
+  };
+  
 
   return (
     
@@ -35,9 +48,9 @@ function App() {
         />
 
         <PrimaryInput
-          value={formData.secondName}
+          value={formData.lastName}
           onChange={handleChange}
-          name="secondName"
+          name="lastName"
           label="Sobrenome"
           placeholder='Digite seu Sobrenome'
         />
@@ -50,7 +63,7 @@ function App() {
         placeholder='Digite seu email'
       />
       <Spacer height="4" />
-      <Button >Enviar</Button>
+      <Button onClick={submit}>Enviar</Button>
 
       </form>
       <Spacer width="4" maxWidth="4"/>
@@ -67,3 +80,5 @@ function App() {
 }
 
 export default App;
+
+
